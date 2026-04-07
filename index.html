@@ -1,13 +1,91 @@
-<html>
-    <head>
-        <title>on of lampu</title>
-    </head>
-    <body>
-        <img src="Assets/images/off.png"" alt="" id="lampu1">
-        <h1>Cetrekan lampu</h1>
-        <button onclick="saklar('on')">Nyalakan lampu</button>
-        <button onclick="saklar('off')">Matikan lampu</button>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>On Off Lampu</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <script src="script.js"></script>
-    </body>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="flex items-center justify-center min-h-screen w-full bg-gray-800 gap-2"
+    >
+      <!-- Lampu 1 -->
+      <div class="flex flex-col gap-2">
+        <img src="Assets/images/off.png" alt="" id="lampu1" />
+
+        <!-- Toggle 1 -->
+        <label
+          for="default-toogle1"
+          class="inline-flex items-center cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            class="sr-only peer"
+            id="default-toogle1"
+            onchange="saklar()"
+          />
+          <div
+            class="relative w-11 h-6 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
+          ></div>
+          <span class="ms-3 text-sm font-medium text-white">Toggle me</span>
+        </label>
+      </div>
+
+      <!-- Lampu 2 -->
+      <div class="flex flex-col gap-2">
+        <img src="Assets/images/off.png" alt="" id="lampu2" />
+        <!-- Toggle 2 -->
+        <label
+          for="default-toogle2"
+          class="inline-flex items-center cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            class="sr-only peer"
+            id="default-toogle2"
+            onchange="saklar()"
+          />
+          <div
+            class="relative w-11 h-6 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
+          ></div>
+          <span class="ms-3 text-sm font-medium text-white">Toggle me</span>
+        </label>
+      </div>
+
+      <!-- Lampu 3 -->
+      <div class="flex flex-col gap-2">
+        <img src="Assets/images/off.png" alt="" id="lampu3" />
+
+        <!-- Toggle 1 -->
+        <label
+          for="default-toogle3"
+          class="inline-flex items-center cursor-pointer"
+        >
+          <input
+            type="checkbox"
+            class="sr-only peer"
+            id="default-toogle3"
+            onchange="saklar()"
+          />
+          <div
+            class="relative w-11 h-6 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
+          ></div>
+          <span class="ms-3 text-sm font-medium text-white">Toggle me</span>
+        </label>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
