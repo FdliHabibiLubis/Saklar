@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>On Off Lampu</title>
+    <title>Saklar Lampu</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -13,79 +13,95 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
       rel="stylesheet"
     />
+
+    <style>
+      .lamp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .lamp img {
+        width: 60px;
+      }
+    </style>
   </head>
 
-  <body>
-    <div
-      class="flex items-center justify-center min-h-screen w-full bg-gray-800 gap-2"
-    >
-      <!-- Lampu 1 -->
-      <div class="flex flex-col gap-2">
-        <img src="Assets/images/off.png" alt="" id="lampu1" />
+  <body class="bg-gray-900 text-white">
+    <h1 class="text-center text-3xl font-bold mt-5">SAKLAR LAMPU RUMAH</h1>
 
-        <!-- Toggle 1 -->
-        <label
-          for="default-toogle1"
-          class="inline-flex items-center cursor-pointer justify-center"
-        >
-          <input
-            type="checkbox"
-            class="sr-only peer"
-            id="default-toogle1"
-            onchange="saklar()"
-          />
-          <div
-            class="relative w-11 h-6 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-          ></div>
-          <span class="ms-3 text-sm font-medium text-white">Tekan</span>
-        </label>
+    <div class="grid md:grid-cols-2 gap-6 p-6">
+      <!-- RUANGAN KELUARGA -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+        <h2 class="text-xl mb-3 font-semibold">Ruang Keluarga</h2>
+        <div class="flex gap-4 flex-wrap">
+          <!-- 3 lampu -->
+          <div class="lamp">
+            <img id="lampu1" src="Assets/images/off.png" />
+            <input type="checkbox" id="t1" onchange="saklar(1)" />
+          </div>
+          <div class="lamp">
+            <img id="lampu2" src="Assets/images/off.png" />
+            <input type="checkbox" id="t2" onchange="saklar(2)" />
+          </div>
+          <div class="lamp">
+            <img id="lampu3" src="Assets/images/off.png" />
+            <input type="checkbox" id="t3" onchange="saklar(3)" />
+          </div>
+        </div>
       </div>
 
-      <!-- Lampu 2 -->
-      <div class="flex flex-col gap-2">
-        <img src="Assets/images/off.png" alt="" id="lampu2" />
-        <!-- Toggle 2 -->
-        <label
-          for="default-toogle2"
-          class="inline-flex items-center cursor-pointer justify-center"
-        >
-          <input
-            type="checkbox"
-            class="sr-only peer"
-            id="default-toogle2"
-            onchange="saklar()"
-          />
-          <div
-            class="relative w-11 h-6 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-          ></div>
-          <span class="ms-3 text-sm font-medium text-white">Tekan</span>
-        </label>
+      <!-- RUANGAN MAKAN -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+        <h2 class="text-xl mb-3 font-semibold">Ruang Makan</h2>
+        <div class="flex gap-4">
+          <div class="lamp">
+            <img id="lampu4" src="Assets/images/off.png" />
+            <input type="checkbox" id="t4" onchange="saklar(4)" />
+          </div>
+        </div>
       </div>
 
-      <!-- Lampu 3 -->
-      <div class="flex flex-col gap-2">
-        <img src="Assets/images/off.png" alt="" id="lampu3" />
+      <!-- RUANGAN TIDUR -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+        <h2 class="text-xl mb-3 font-semibold">Ruang Tidur</h2>
+        <div class="flex gap-4">
+          <div class="lamp">
+            <img id="lampu5" src="Assets/images/off.png" />
+            <input type="checkbox" id="t5" onchange="saklar(5)" />
+          </div>
+          <div class="lamp">
+            <img id="lampu6" src="Assets/images/off.png" />
+            <input type="checkbox" id="t6" onchange="saklar(6)" />
+          </div>
+        </div>
+      </div>
 
-        <!-- Toggle 1 -->
-        <label
-          for="default-toogle3"
-          class="inline-flex items-center cursor-pointer justify-center"
-        >
-          <input
-            type="checkbox"
-            class="sr-only peer"
-            id="default-toogle3"
-            onchange="saklar()"
-          />
-          <div
-            class="relative w-11 h-6 bg-gray-200 rounded-full peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:bg-gray-700 dark:peer-focus:ring-blue-800 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
-          ></div>
-          <span class="ms-3 text-sm font-medium text-white">Tekan</span>
-        </label>
+      <!-- RUANGAN TAMU -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+        <h2 class="text-xl mb-3 font-semibold">Ruang Tamu</h2>
+        <div class="flex gap-4 flex-wrap">
+          <div class="lamp">
+            <img id="lampu7" src="Assets/images/off.png" />
+            <input type="checkbox" id="t7" onchange="saklar(7)" />
+          </div>
+          <div class="lamp">
+            <img id="lampu8" src="Assets/images/off.png" />
+            <input type="checkbox" id="t8" onchange="saklar(8)" />
+          </div>
+          <div class="lamp">
+            <img id="lampu9" src="Assets/images/off.png" />
+            <input type="checkbox" id="t9" onchange="saklar(9)" />
+          </div>
+          <div class="lamp">
+            <img id="lampu10" src="Assets/images/off.png" />
+            <input type="checkbox" id="t10" onchange="saklar(10)" />
+          </div>
+        </div>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
